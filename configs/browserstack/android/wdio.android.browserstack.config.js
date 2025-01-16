@@ -9,7 +9,7 @@ exports.config = {
     },
 
     specs: [
-        '../../../tests/drag/*.js'
+        '../../../tests/**/*.js'
     ],
 
     user: process.env.BROWSERSTACK_USER,

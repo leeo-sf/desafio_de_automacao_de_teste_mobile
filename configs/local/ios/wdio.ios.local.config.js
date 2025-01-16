@@ -1,6 +1,10 @@
 const path = require("path");
-const { config } = require("../../wdio.conf")
+const { config } = require("../../wdio.shared.config")
 require("dotenv").config();
+
+config.specs = [
+    '../../../tests/**/*.js'
+]
 
 config.capabilities = [{
     platformName: "iOS",
