@@ -1,9 +1,9 @@
-export const login = {
+export const loginData = {
     pageTitle: "Login / Sign up Form",
     option: {
         login: "login"
     },
-    alertMsgAfterLogin: {
+    alertDetails: {
         title: { androidId: "alertTitle", text: "Success" },
         message: { androidId: "message", text: "You are logged in!" }
     },

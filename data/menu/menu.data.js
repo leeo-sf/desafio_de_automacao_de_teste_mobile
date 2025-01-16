@@ -1,4 +1,4 @@
-export const menu = {
+export const menuData = {
     menuOptions: {
         home: { icon: "Home", menuTitle: "Home" },
         webview: { icon: "Webview", menuTitle: "Webview" },

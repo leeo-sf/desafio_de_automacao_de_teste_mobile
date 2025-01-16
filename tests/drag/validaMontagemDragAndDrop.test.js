@@ -1,11 +1,11 @@
 import { assertChai, dragScreen, menuScreen } from "../../variables"
-import { menu } from "../../data/menu/menu.data";
+import { menuData } from "../../data/menu/menu.data";
 import { dragData } from "../../data/drag/drag.data";
 
 describe('Valida montagem completa do "Quebra-cabeça"', function () {
 
     before("Navega até tela de drag", async function () {
-        await menuScreen.navigateToLoginScreen(menu.menuOptions.drag, 18000)
+        await menuScreen.navigateToOptTabBarScreen(menuData.menuOptions.drag, 18000)
         await dragScreen.waitForScreenToAppear()
     })
 

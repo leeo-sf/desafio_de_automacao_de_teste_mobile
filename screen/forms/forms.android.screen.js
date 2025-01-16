@@ -6,16 +6,16 @@ export default class FormsAndroidScreen extends BaseScreen {
     set lblGenericTitleGroup(text) { this.label = $(`android=new UiSelector().text("${text}")`) }
     get lblGenericTitleGroup() { return this.label }
 
-    get inpTypeSomething() { return $('android=new UiSelector().resourceId("RNE__Input__text-input")') }
-    get lblYouHaveTyped() { return $('android=new UiSelector().description("input-text-result")') }
-    get lblSwitchText() { return $('//android.widget.TextView[@content-desc="switch-text"]') }
-    get btnSwitch() { return $('android=new UiSelector().description("switch")') }
-    get dwnSelectAnItem() { return $('//android.view.ViewGroup[@content-desc="Dropdown"]/android.view.ViewGroup') }
+    get inpTypeSomething() { return $('~text-input') }
+    get lblYouHaveTyped() { return $('~input-text-result') }
+    get lblSwitchText() { return $('~switch-text') }
+    get btnSwitch() { return $('~switch') }
+    get dwnSelectAnItem() { return $('~Dropdown') }
     set btnOptionDropdown(textValeu) { this.option = $(`//android.widget.CheckedTextView[@resource-id="android:id/text1" and @text="${textValeu}"]`) }
     get btnOptionDropdown() { return this.option }
-    get lblOptionSelectedDropdown() { return $('//android.widget.EditText[@resource-id="text_input"]') }
+    get lblOptionSelectedDropdown() { return $('//*[@content-desc="Dropdown"]/*/android.widget.EditText') }
 
-    set btnGenericActiveOrInactive(text) { this.button = $(`//android.view.ViewGroup[@content-desc="button-${text}"]/android.view.ViewGroup`) }
+    set btnGenericActiveOrInactive(text) { this.button = $(`~button-${text}`) }
     get btnGenericActiveOrInactive() { return this.button }
 
     async isDisplayedLblGenericTitleGroup(element) {

@@ -1,11 +1,11 @@
 import { assertChai, formsScreen, menuScreen } from "../../variables"
 import { formsData } from "../../data/forms/forms.data"
-import { menu } from "../../data/menu/menu.data";
+import { menuData } from "../../data/menu/menu.data";
 
 describe("Valida 'ON' e 'OFF' do switch", function () {
 
     before("Navega até tela de forms", async function () {
-        await menuScreen.navigateToLoginScreen(menu.menuOptions.forms, 18000)
+        await menuScreen.navigateToOptTabBarScreen(menuData.menuOptions.forms, 18000)
     })
 
     it("Valida mudança do switch para 'ON'", async function () {

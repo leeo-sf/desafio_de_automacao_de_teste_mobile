@@ -4,22 +4,20 @@ import { timeoutMsg } from "../../data/timeoutMessage.data";
 
 export default class DragAndroidScreen extends BaseScreen {
 
-    get lblPageTitle() { return $('android=new UiSelector().text("Drag and Drop")') }
+    get pageScreen() { return $('Drag-drop-screen') }
     
-    get imgToAssemble() { return $('//android.view.ViewGroup[@content-desc="Drag-drop-screen"]/android.widget.ImageView') }
-    set imgGenericDrop(text) { this.imgDrop = $(`//android.view.ViewGroup[@content-desc="drop-${text}"]`) }
+    set imgGenericDrop(text) { this.imgDrop = $(`~drop-${text}`) }
     get imgGenericDrop() { return this.imgDrop }
     
-    set imgGenericDrag(text) { this.imgDrag = $(`//android.view.ViewGroup[@content-desc="drag-${text}"]`) }
+    set imgGenericDrag(text) { this.imgDrag = $(`~drag-${text}`) }
     get imgGenericDrag() { return this.imgDrag }
 
     set lblGenericMsgCongratulations(text) { this.label = $(`android=new UiSelector().text("${text}")`) }
     get lblGenericMsgCongratulations() { return this.label }
-    get btnRetry() { return $(`//android.view.ViewGroup[@content-desc="button-Retry"]/android.view.ViewGroup`) }
+    get btnRetry() { return $(`~button-Retry`) }
 
     async waitForScreenToAppear() {
-        return await this.lblPageTitle.waitForDisplayed() &&
-            await this.imgToAssemble.waitForDisplayed()
+        return await this.pageScreen.isDisplayed()
     }
 
     async isDisplayedGenericMsgCongratulations(element) {

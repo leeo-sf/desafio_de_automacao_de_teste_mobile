@@ -1,9 +1,9 @@
-export const signup = {
+export const signupData = {
     pageTitle: "Login / Sign up Form",
     option: {
         signUp: "sign-up"
     },
-    alertMsgAfterSignUp: {
+    alertDetails: {
         title: { androidId: "alertTitle", text: "Signed Up!" },
         message: { androidId: "message", text: "You successfully signed up!" }
     },

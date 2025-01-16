@@ -1,7 +1,7 @@
 import BaseScreen from "../base.screen";
 import { timeoutMsg } from "../../data/timeoutMessage.data";
-import { login } from "../../data/login/login.data";
-import { signup } from "../../data/signup/signup.data";
+import { loginData } from "../../data/login/login.data";
+import { signupData } from "../../data/signup/signup.data";
 import { timeout } from "../../data/timeout.data";
 
 export default class LoginAndroidScreen extends BaseScreen {
@@ -10,15 +10,15 @@ export default class LoginAndroidScreen extends BaseScreen {
     set btnGenericOptionLoginOrSignUp(element) { this.option = $(`android=new UiSelector().description("button-${element}-container")`) }
     get btnGenericOptionLoginOrSignUp() { return this.option }
 
-    get inpEmail() { return $('//android.widget.EditText[@content-desc="input-email"]') }
-    get inpPassword() { return $('//android.widget.EditText[@content-desc="input-password"]') }
-    get inpRepeatPassword() { return $('//android.widget.EditText[@content-desc="input-repeat-password"]') }
+    get inpEmail() { return $('~input-email') }
+    get inpPassword() { return $('~input-password') }
+    get inpRepeatPassword() { return $('~input-repeat-password') }
     set lblIncorrectData(element) { this.labelShort = $(`//android.widget.TextView[@text="${element}"]`) }
     get lblIncorrectData() { return this.labelShort }
 
     get lblTextAboutBiometrics() { return $('android=new UiSelector().text("When the device has Touch/FaceID (iOS) or FingerPrint enabled a biometrics button will be shown to use and test the login.")') }
 
-    set btnGenericSendLoginOrSignUp(element) { this.button = $(`//android.view.ViewGroup[@content-desc="button-${element}"]/android.view.ViewGroup`) }
+    set btnGenericSendLoginOrSignUp(element) { this.button = $(`~button-${element}`) }
     get btnGenericSendLoginOrSignUp() { return this.button }
 
     set lblGenericAlert(element) { this.label = $(`android=new UiSelector().resourceId("android:id/${element.androidId}").text("${element.text}")`) }
@@ -69,15 +69,9 @@ export default class LoginAndroidScreen extends BaseScreen {
         return await this.btnGenericSendLoginOrSignUp.isDisplayed()
     }
 
-    async isDisplayMsgSuccessfullLogin() {
-        return await this.isDisplayedElementAlert(login.alertMsgAfterLogin.title) &&
-            await this.isDisplayedElementAlert(login.alertMsgAfterLogin.message) &&
-            await this.btnOk.isDisplayed()
-    }
-
-    async isDisplayedMsgSuccessfullSignup() {
-        return await this.isDisplayedElementAlert(signup.alertMsgAfterSignUp.title) &&
-            await this.isDisplayedElementAlert(signup.alertMsgAfterSignUp.message) &&
+    async isDisplayedAlertSuccessfull(element) {
+        return await this.isDisplayedElementAlert(element.title) &&
+            await this.isDisplayedElementAlert(element.message) &&
             await this.btnOk.isDisplayed()
     }
 
@@ -94,7 +88,7 @@ export default class LoginAndroidScreen extends BaseScreen {
     async doLogin(email, password) {
         await this.addValueElement(this.inpEmail, timeoutMsg.login.msgInpEmail, email)
         await this.addValueElement(this.inpPassword, timeoutMsg.login.msgInpPassowrd, password)
-        this.btnGenericSendLoginOrSignUp = login.btnSend.btnLogin
+        this.btnGenericSendLoginOrSignUp = loginData.btnSend.btnLogin
         await this.clickElement(this.btnGenericSendLoginOrSignUp, timeoutMsg.login.msgBtnLogin)
     }
 
@@ -102,7 +96,7 @@ export default class LoginAndroidScreen extends BaseScreen {
         await this.addValueElement(this.inpEmail, timeoutMsg.login.msgInpEmail, email)
         await this.addValueElement(this.inpPassword, timeoutMsg.login.msgInpPassowrd, password)
         await this.addValueElement(this.inpRepeatPassword, timeoutMsg.signup.msgInpRepeatPassword, confirmPassword)
-        this.btnGenericSendLoginOrSignUp = signup.btnSend.btnSignUp
+        this.btnGenericSendLoginOrSignUp = signupData.btnSend.btnSignUp
         await this.clickElement(this.btnGenericSendLoginOrSignUp, timeoutMsg.signup.msgBtnSignup)
     }
 
