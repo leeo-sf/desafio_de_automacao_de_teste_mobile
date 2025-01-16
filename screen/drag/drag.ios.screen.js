@@ -1,5 +1,5 @@
-import BaseScreen from "../base.screen";
+import DragAndroidScreen from "./drag.android.screen"
 
-export default class DragIosScreen extends BaseScreen {
+export default class DragIosScreen extends DragAndroidScreen {
 
 }

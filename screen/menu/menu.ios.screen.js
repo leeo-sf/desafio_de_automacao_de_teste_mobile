@@ -1,5 +1,5 @@
-import BaseScreen from "../base.screen";
+import MenuAndroidScreen from "./menu.android.screen";
 
-export default class MenuIosScreen extends BaseScreen {
+export default class MenuIosScreen extends MenuAndroidScreen {
 
 }

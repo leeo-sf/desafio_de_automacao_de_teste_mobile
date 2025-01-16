@@ -1,5 +1,5 @@
-import BaseScreen from "../base.screen";
+import FormsAndroidScreen from "./forms.android.screen";
 
-export default class FormsIosScreen extends BaseScreen {
+export default class FormsIosScreen extends FormsAndroidScreen {
 
 }
