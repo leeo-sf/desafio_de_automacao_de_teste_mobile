@@ -23,5 +23,8 @@ export const timeoutMsg = {
         msgLblSwitch: 'O texto "Click to turn the switch $status" do campo "Switch" não foi exibido!',
         msgDropdown: 'O dropdown não foi exibido!',
         msgOptionDropdown: 'O texto da opção selecionada não foi exibido!'
+    },
+    drag: {
+        msgLabel: (text) => `A label com a mensagem ${text} não foi exibida!`
     }
 }
