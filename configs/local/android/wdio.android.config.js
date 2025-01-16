@@ -11,4 +11,13 @@ config.capabilities = [{
     'appium:app': path.resolve("./apps/android.wdio.native.app.v1.0.8.apk")
 }]
 
+config.reporters = [
+    'spec',
+    ['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: true,
+    }]
+],
+
 exports.config = config;
