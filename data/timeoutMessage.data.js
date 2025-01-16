@@ -15,5 +15,13 @@ export const timeoutMsg = {
     signup: {
         msgInpRepeatPassword: 'O campo "Confirm password" na tela de sign up não foi exibido!',
         msgBtnSignup: 'O botão "Sign up" na tela de login não foi exibido!',
+    },
+    forms: {
+        msgTypeSomething: 'O campo de texto "Type Something" não foi exibido!',
+        msgYouHaveTyped: 'O títlo do campo "You have typed" não foi exibido!',
+        msgBtnSwitch: 'O botão "Switch" na tela de forms não foi exibido!',
+        msgLblSwitch: 'O texto "Click to turn the switch $status" do campo "Switch" não foi exibido!',
+        msgDropdown: 'O dropdown não foi exibido!',
+        msgOptionDropdown: 'O texto da opção selecionada não foi exibido!'
     }
 }

@@ -1,4 +1,0 @@
-{
-  "using": "-android uiautomator",
-  "value": "new UiSelector().resourceId(\"android:id/message\").text(\"You successfully signed up!\")"
-}

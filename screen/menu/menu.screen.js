@@ -3,7 +3,7 @@ import MenuIosScreen from "./menu.ios.screen";
 
 export default class MenuScreen {
 
-    getLoginScreen() {
+    getMenuScreen() {
         return driver.isAndroid ? new MenuAndroidScreen() : new MenuIosScreen();
     }
     

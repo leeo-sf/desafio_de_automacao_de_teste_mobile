@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": "new UiSelector().resourceId(\"android:id/button1\").text(\"OK\")"
-}
