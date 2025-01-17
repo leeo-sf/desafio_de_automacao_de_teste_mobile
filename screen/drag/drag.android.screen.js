@@ -4,7 +4,7 @@ import { timeoutMsg } from "../../data/timeoutMessage.data";
 
 export default class DragAndroidScreen extends BaseScreen {
 
-    get pageScreen() { return $('Drag-drop-screen') }
+    get pageScreen() { return $('~Drag-drop-screen') }
     
     set imgGenericDrop(text) { this.imgDrop = $(`~drop-${text}`) }
     get imgGenericDrop() { return this.imgDrop }
