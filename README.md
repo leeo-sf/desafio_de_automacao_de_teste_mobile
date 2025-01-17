@@ -1,4 +1,4 @@
-# Desafio de Automação de teste Mobile
+# Desafio de Automação de Teste Mobile
 
 Este repositório tem como objetivo a validação do app ([nativo-demo-app](https://github.com/webdriverio/native-demo-app/releases)) focando nos contextos de login/cadastro, navegação, preenchimento de formulário e validação de mensagem de erros [Cobretura realizada](#cenários-de-teste). 
 <br>`OBS:` por falta dos recursos necessários não foi executado os testes no device iOS. Foi disponibilizado um .zip pelo *native-demo-app* para o iOS, mas o mesmo não é executado via BrowserStack.
