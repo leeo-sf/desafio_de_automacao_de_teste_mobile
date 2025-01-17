@@ -8,10 +8,10 @@ config.key = process.env.BROWSERSTACK_KEY
 
 config.protocolTimeout = 120000
 
+config.hostname = 'hub.browserstack.com'
+config.port = 443
+
 config.services = ['browserstack']
-config.appium = {
-    command: 'appium'
-}
 
 config.specs = [
     '../../../tests/**/*.js'
@@ -21,7 +21,7 @@ config.capabilities = [
     {
         'appium:automationName': 'UiAutomator2',
         'appium:deviceName': 'Samsung Galaxy M52',
-        'appium:platformVersion': '13.0',
+        'appium:platformVersion': '11.0',
         platformName: 'Android',
         'appium:app': process.env.APP_ID,
         'appium:appPackage': 'com.wdiodemoapp',

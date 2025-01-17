@@ -20,7 +20,7 @@ config.reporters = [
     ['allure', {
         outputDir: 'allure-results',
         disableWebdriverStepsReporting: true,
-        disableWebdriverScreenshotsReporting: true,
+        disableWebdriverScreenshotsReporting: false,
         reportedEnvironmentVars: {
             Environment: "Local",
             Platform: 'Android',
