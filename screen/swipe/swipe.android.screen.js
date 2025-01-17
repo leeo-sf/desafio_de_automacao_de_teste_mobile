@@ -21,7 +21,7 @@ export default class SwipeAndroidScreen extends BaseScreen {
 
     async getTextSlide(element) {
         this.carouselGenericItem = element
-        let slide = await this.carouselGenericItem.$(this.contCard).$(this.contSlideText).$$('*')
+        let slide = await this.carouselGenericItem.$(this.contCard).$(this.contSlideText).$$('android=new UiSelector().className("android.widget.TextView")')
 
         return {
             title: await slide[0].getText(),
@@ -32,15 +32,15 @@ export default class SwipeAndroidScreen extends BaseScreen {
     async slideCarouselTo(direction) {
         const carouselLocation = await this.gruopCarousel.getLocation()
         const carouselSize = await this.gruopCarousel.getSize()
-        var startX = carouselLocation.x + carouselSize.width - 20
+        var startX = carouselLocation.x + carouselSize.width - 50
         var startY = carouselLocation.y + carouselSize.height / 2
-        var endX = carouselLocation.x
+        var endX = carouselLocation.x + carouselSize.width / 2
         var endY = startY
 
         if (direction === "right") {
             startX = carouselLocation.x
             startY = carouselLocation.y + carouselSize.height / 2
-            endX = carouselLocation.x + carouselSize.width - 20
+            endX = carouselLocation.x + carouselSize.width - 50
             endY = startY
         }
         
