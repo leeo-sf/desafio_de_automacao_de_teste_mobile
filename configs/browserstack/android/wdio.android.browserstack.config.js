@@ -14,7 +14,7 @@ config.appium = {
 }
 
 config.specs = [
-    '../../../tests/swipe/*.js'
+    '../../../tests/**/*.js'
 ]
 
 config.capabilities = [
