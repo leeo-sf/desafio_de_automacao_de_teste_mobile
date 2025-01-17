@@ -20,8 +20,8 @@ config.specs = [
 config.capabilities = [
     {
         'appium:automationName': 'UiAutomator2',
-        'appium:deviceName': 'Samsung Galaxy M52',
-        'appium:platformVersion': '11.0',
+        'appium:deviceName': 'Samsung Galaxy S23',
+        'appium:platformVersion': '13.0',
         platformName: 'Android',
         'appium:app': process.env.APP_ID,
         'appium:appPackage': 'com.wdiodemoapp',
