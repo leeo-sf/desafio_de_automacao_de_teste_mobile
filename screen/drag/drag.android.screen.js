@@ -61,8 +61,8 @@ export default class DragAndroidScreen extends BaseScreen {
                     actions: [
                         { type: 'pointerMove', duration: 0, x: origemCenter.x, y: origemCenter.y },
                         { type: 'pointerDown', button: 0 },
-                        { type: 'pause', duration: 500 },
-                        { type: 'pointerMove', duration: 1000, x: destinoCenter.x, y: destinoCenter.y },
+                        { type: 'pause', duration: 200 },
+                        { type: 'pointerMove', duration: 300, x: destinoCenter.x, y: destinoCenter.y },
                         { type: 'pointerUp', button: 0 },
                     ],
                 }
