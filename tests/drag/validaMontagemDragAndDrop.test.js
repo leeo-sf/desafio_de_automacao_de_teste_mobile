@@ -1,6 +1,7 @@
-import { assertChai, dragScreen, menuScreen } from "../../variables"
+import { assertChai, dragScreen } from "../../variables"
 import { menuData } from "../../data/menu/menu.data";
 import { dragData } from "../../data/drag/drag.data";
+import { menuScreen } from "../../variables";
 
 describe('Valida montagem completa do "Quebra-cabeça"', function () {
 

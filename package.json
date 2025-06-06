@@ -22,7 +22,6 @@
     "android-local": "wdio run ./configs/local/android/wdio.android.local.config.js",
     "allure-generate": "allure generate allure-results --clean -o allure-report",
     "allure-open-in-browser": "allure open allure-report",
-
     "android-browserstack": "wdio run ./configs/browserstack/android/wdio.android.browserstack.config.js",
     "allure-generate-browserstack": "allure generate allure-results/browserstack --clean -o allure-report/browserstack",
     "allure-open-in-browser-browserstack": "allure open allure-report/browserstack"

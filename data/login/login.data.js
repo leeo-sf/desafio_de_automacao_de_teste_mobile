@@ -14,7 +14,8 @@ export const loginData = {
     lblAboutBiometrics: 'When the device has Touch/FaceID (iOS) or FingerPrint enabled a biometrics button will be shown to use and test the login.',
     btnSend: {
         btnLogin: "LOGIN"
-    }
+    },
+    option: "teste"
 }
 
 export const testDataValidaLoginComSucesso = {

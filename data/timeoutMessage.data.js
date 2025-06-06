@@ -1,6 +1,6 @@
 export const timeoutMsg = {
     menu: {
-        msgOptionNotFound: (text) => `A opção do menu '${text}' não foi exibida!`
+        msgOptionNotFound: (text) => 'A opção do menu ' + text + ' não foi exibida!'
     },
     login: {
         msgInpEmail: 'O campo "Email" na tela de login não foi exibido!',

@@ -37,7 +37,7 @@ describe("Valida navegação completa do carousel", function () {
 
     it('Valida slider "SUPPORT VIDEOS" do carousel', async function () {
         await swipeScreen.slideCarouselTo('left')
-        let textsSlider = await swipeScreen.getTextSlide(3)
+        let textsSlider = await swipeScreen.getTextSlide(3) // comentário para lembrar
 
         assertChai.isTrue(await swipeScreen.waitForCarouselItemToAppear(3), 'O card "SUPPORT VIDEOS" não foi exibido!')
         assertChai.equal(textsSlider.title, swipeData.steps.supportVideos.title, 'O título do slider "SUPPORT VIDEOS" está diferente do esperado!')

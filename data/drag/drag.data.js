@@ -13,5 +13,6 @@ export const dragData = {
     congratulations: {
         title: 'Congratulations',
         tryAgain: 'You made it, click retry if you want to try it again.'
-    }
+    },
+    testando_camelcase: 'teste'
 }

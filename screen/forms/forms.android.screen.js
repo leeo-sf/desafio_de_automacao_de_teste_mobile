@@ -43,6 +43,10 @@ export default class FormsAndroidScreen extends BaseScreen {
         return await this.btnSwitch.isDisplayed()
     }
 
+    async isDisplayedBtnSwitch() {
+        await this.clickSwitch()
+    }
+
     async isEnabledBtnSwitch() {
         return await this.btnSwitch.isEnabled()
     }

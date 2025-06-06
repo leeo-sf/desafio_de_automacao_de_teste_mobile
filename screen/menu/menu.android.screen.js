@@ -6,6 +6,7 @@ export default class MenuAndroidScreen extends BaseScreen {
 
     set btnMenu(text) { this.button = $(`~${text}`) }
     get btnMenu() { return this.button }
+    get testElement() { this.test = $('') }
 
     async navigateToOptTabBarScreen(menuOption, elementTimeout = timeout.default) {
         this.btnMenu = menuOption.menuTitle

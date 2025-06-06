@@ -5,7 +5,7 @@ export default class SwipeAndroidScreen extends BaseScreen {
 
     get pageScreen() { return $('~Swipe-screen') }
     get gruopCarousel() { return $('~Carousel') }
-    set carouselGenericItem(element) { this.item = $(`android=new UiSelector().resourceId("__CAROUSEL_ITEM_${element}_READY__")`) }
+    set carouselGenericItem(element) { return $(`android=new UiSelector().resourceId("__CAROUSEL_ITEM_${element}_READY__")`) }
     get carouselGenericItem() { return this.item }
     get contCard() { return ('~card') }
     get contSlideText() { return ('~slideTextContainer') }

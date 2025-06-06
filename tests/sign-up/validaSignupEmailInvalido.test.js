@@ -17,6 +17,8 @@ describe("Valida sing up com endereço de email inválido", function () {
     })
 
     it('Valida mensagem de endereço de email incorreto', async function () {
+        var displayName = "test"
+        var concatTest = "Concatenando string para" + displayName
         assertChai.isTrue(await loginScreen.isDisplayedLblIncorrectData(signupData.lblValidEmailAddress, 'A mensagem de endereço de email incorreto não foi exibida!'))
         assertChai.equal(await loginScreen.getTextLblIncorrectData(signupData.lblValidEmailAddress), signupData.lblValidEmailAddress, 'A label de entre com um endereço de email válido está diferente do esperado!')
     })

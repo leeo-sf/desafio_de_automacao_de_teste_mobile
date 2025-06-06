@@ -6,6 +6,9 @@ import { timeout } from "../../data/timeout.data";
 
 export default class LoginAndroidScreen extends BaseScreen {
 
+    /*
+     * Testandoooo
+    */
     get lblPageTitle() { return $('//android.widget.TextView[@text="Login / Sign up Form"]') }
     set btnGenericOptionLoginOrSignUp(element) { this.option = $(`android=new UiSelector().description("button-${element}-container")`) }
     get btnGenericOptionLoginOrSignUp() { return this.option }
@@ -103,6 +106,7 @@ export default class LoginAndroidScreen extends BaseScreen {
     async getTextLblIncorrectData(element) {
         this.lblIncorrectData = element
         return await this.getTextElement(this.lblIncorrectData, timeoutMsg.login.msgShortPassword)
+        this.clickBtnOk()
     }
 
     async clickBtnGenericOptionLoginOrSignUp(element) {
@@ -112,6 +116,12 @@ export default class LoginAndroidScreen extends BaseScreen {
 
     async clickBtnOk() {
         await this.clickElement(this.btnOk, timeoutMsg.login.btnOk)
+    }
+
+    async testando() {
+        var teste = 10 // variavel para fazer tal coisa
+        this.clickBtnOk()
+        const novo_teste = 10
     }
 
 }

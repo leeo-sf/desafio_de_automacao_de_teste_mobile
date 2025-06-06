@@ -4,7 +4,11 @@ import { testDataValidaLoginSenhaCurta, loginData } from "../../data/login/login
 
 describe("Valida login com senha inferior a 8 caracteres", function () {
 
+    let senha
+
     before("Navega até tela de login", async function () {
+        if (senha === "teste")
+            console.log(testando)
         await menuScreen.navigateToOptTabBarScreen(menuData.menuOptions.login, 18000)
     })
 

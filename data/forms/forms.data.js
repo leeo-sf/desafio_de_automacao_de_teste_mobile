@@ -7,7 +7,7 @@ export const formsData = {
         dropdown: 'Dropdown:',
         buttons: 'Buttons'
     },
-    msgSwitch: (status) => `Click to turn the switch ${status}`,
+    msgSwitch: (status) => 'Click to turn the switch ' + status,
     dropdown: {
         wdio: 'webdriver.io is awesome',
         appium: 'Appium is awesome',
